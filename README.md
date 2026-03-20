@@ -213,6 +213,40 @@ summary = validator.get_summary(data)
 print(summary)
 ```
 
+## Demonstration
+
+Below is a visualization of the data before and after running the basic ML data pipeline (imputation and normalization):
+
+![Pipeline Output](output.png)
+
+- **Left:** Original data with missing values and unnormalized features.
+- **Right:** Data after imputation (mean fill) and normalization (scaled to 0-1).
+
+To generate this plot yourself, run:
+
+```bash
+$env:PYTHONPATH="$(Get-Location)\src"; python examples.py
+```
+
+This will create `output.png` in your project directory.
+
+## Regression Demonstration with More Data
+
+Below is a visualization of the regression results using a larger synthetic dataset:
+
+![Regression Output](regression_output.png)
+
+- The scatter plot shows the relationship between the true and predicted (normalized) income values on the test set.
+- The closer the points are to the red dashed line, the better the model's predictions.
+
+To generate this plot yourself, run:
+
+```bash
+$env:PYTHONPATH="$(Get-Location)\src"; python examples.py
+```
+
+This will create `regression_output.png` in your project directory.
+
 ## Project Structure
 
 ```
